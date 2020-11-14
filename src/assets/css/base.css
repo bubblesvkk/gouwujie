@@ -1,0 +1,54 @@
+@import "normalize.css";
+
+:root{
+  /* 选择到跟标签html*/
+  --color-text:#666;
+  /*--color-text是定义变量*/
+  /*  color:var(--color-text)*/
+  /*这是使用方法*/
+  --high-light:#ff5777;
+  --high-tint:#ff8198; /*整体背景颜色，导航等位置的*/
+  --color-background:#fff;
+  --front-size:14px;
+  --line-height:1.5
+}
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Helvetica Neue',Helvetica,'PingFang sc','Hiragino Sans GB',
+'Microsoft YaHei','微软雅黑','Arial','SansSerif';
+  /*禁止用户选择文字*/
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+/*  苹果safari引擎，tap/点击，highlight高光*/
+  background: var(--color-background);
+  color: var(--color-text);
+  width: 100vw;
+}
+a{
+  color: var(--color-text);
+  text-decoration: none;
+}
+.clear-fix::after{
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.clear-fix{
+  /*ie专属 内容缩放相关*/
+  zoom: 1;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
