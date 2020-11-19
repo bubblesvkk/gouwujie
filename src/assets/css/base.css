@@ -7,7 +7,7 @@
   /*  color:var(--color-text)*/
   /*这是使用方法*/
   --high-light:#ff5777;
-  --high-tint:#ff8198; /*整体背景颜色，导航等位置的*/
+  --color-tint:#ff8198; /*整体背景颜色，导航等位置的*/
   --color-background:#fff;
   --front-size:14px;
   --line-height:1.5
@@ -29,6 +29,7 @@ body{
   background: var(--color-background);
   color: var(--color-text);
   width: 100vw;
+  /*overflow: hidden;*/
 }
 a{
   color: var(--color-text);

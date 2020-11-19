@@ -66,7 +66,9 @@
 
 <style scoped>
   #tabbar{
+    z-index: 9;
     width: 100%;
+    /*margin-top: 50px;*/
     position: fixed;
     bottom: 0;
     display: flex;
