@@ -17,11 +17,10 @@
 <script>
 
   import NavBar from "../../components/common/navBar/NavBar";
-  import {getHomedata, getHomeMultidata} from "../../network/home";
+  import {getHomeMultidata} from "../../network/home";
   import SwiperA from "../../components/common/SwiperA";
   import Circle from "../../components/common/circle/Circle";
   import SortTabbar from "../../components/common/sortTabBar/SortTabbar";
-  // import Popular from "../../components/common/Popular";
 
 
   export default {

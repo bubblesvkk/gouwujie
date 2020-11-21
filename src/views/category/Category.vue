@@ -13,19 +13,19 @@
 <script>
   import NavBar from "../../components/common/navBar/NavBar";
   import CateTabbar from "../../components/common/categoryTabBar/CateTabbar";
-  import {getcategorydata, getsubcategorydata} from "../../network/home";
-  import Shangyi from "../../components/content/cateTabBar/Shangyi";
+  import {getcategorydata} from "../../network/home";
+
 
 
   export default {
     name: "Category",
     components: {
-      NavBar,CateTabbar,Shangyi
+      NavBar,CateTabbar
     },
     data(){
       return{
         cateresult:null,
-        shangyiresult:null
+
       }
     },
     mounted() {
@@ -33,11 +33,6 @@
       {
         this.cateresult=res.data.category.list
         console.log(this.cateresult)
-      })
-      getsubcategorydata().then(res =>
-      {
-        this.shangyiresult=res.data.list
-        console.log(this.shangyiresult)
       })
 
 

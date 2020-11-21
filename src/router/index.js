@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import Kuzi from "../components/content/cateTabBar/Kuzi";
 const Category=()=>import('@/views/category/Category')
 const Home=()=>import('@/views/home/Home')
 const Profile=()=>import('@/views/profile/Profile')
@@ -13,7 +14,7 @@ const Qunzi=()=>import('@/components/content/cateTabBar/Qunzi')
 const routes = [
   {path:'',redirect:'/home/popular'},
   {path:'/home',redirect:'/home/popular'},
-  {path:'/category',redirect:'/category/shangyi'},
+  {path:'/category',redirect:'/category/popularing'},
   {
     path:'/home',component:Home,
     children:[
@@ -45,6 +46,10 @@ const routes = [
       {
         path:'qunzi',
         component:Qunzi
+      },
+      {
+        path:'kuzi',
+        component:Kuzi
       }
     ]
 
@@ -52,9 +57,6 @@ const routes = [
   {path: '/profile',component:Profile},
   {path: '/shopcart',component:ShopCart},
 
-  // {path:'/home/popular',component:Popular},
-  // {path:'/home/newstyle',component:Newstyle},
-  // {path:'/home/selection',component:Selection},
 
 
 

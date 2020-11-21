@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  import {getcategorydata, getsubcategorydata} from "../../../network/home";
+  import {getsubcategorydata} from "../../../network/home";
 
   export default {
     name: "Shangyi",
@@ -44,7 +44,7 @@
     padding-top: 49px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     position: absolute;
     top: 0;
     left: 90px;

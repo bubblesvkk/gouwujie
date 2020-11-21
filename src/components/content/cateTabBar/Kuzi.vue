@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="Wrap">
-      <div v-for="syitem in popresult" class="imgContent">
+      <div v-for="syitem in kuziresult" class="imgContent">
         <a :href="syitem.link">
           <img :src="syitem.image" alt="">
         </a>
@@ -15,19 +15,19 @@
 </template>
 
 <script>
-  import {getpopdata} from "../../../network/home";
+  import {getkuzidata} from "../../../network/home";
 
   export default {
-    name: "Popularing",
+    name: "Kuzi",
     data() {
       return {
-        popresult: null
+        kuziresult: null
       }
     },
     mounted() {
-      getpopdata().then(res => {
-        this.popresult = res.data.list
-        console.log(this.popresult)
+      getkuzidata().then(res => {
+        this.kuziresult = res.data.list
+        console.log(this.kuziresult)
       })
 
 
@@ -36,6 +36,7 @@
 </script>
 
 <style scoped>
+
   #Wrap {
     padding-top: 49px;
     display: flex;
@@ -64,5 +65,4 @@
   .imgContent p {
     text-align: center;
   }
-
 </style>
